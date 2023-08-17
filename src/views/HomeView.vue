@@ -1,14 +1,19 @@
 <template>
     <div class="home">
         <div class="count">
-            0
+            {{ storeCounter.count }}
         </div>
         <div class="buttons">
-            <button>-</button>
-            <button>+</button>
+            <button @click="storeCounter.decreaseCount">-</button>
+            <button @click="storeCounter.increaseCount">+</button>
         </div>
     </div>
 </template>
+
+<script setup>
+    import { useCounterStore } from '../stores/counter';
+    const storeCounter = useCounterStore();
+</script>
 
 <style>
 .count {
