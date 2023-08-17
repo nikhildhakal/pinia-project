@@ -7,6 +7,10 @@
             <button @click="storeCounter.decreaseCount">-</button>
             <button @click="storeCounter.increaseCount">+</button>
         </div>
+        <hr>
+        <div>
+            This counter is <strong>{{ storeCounter.oddOrEven }}</strong>
+        </div>
     </div>
 </template>
 
